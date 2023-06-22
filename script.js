@@ -5,9 +5,15 @@ const tela = document.getElementById('tela')
 const p_data = document.getElementById('data')
 const btn_apagar_tudo= document.getElementById('btn_apagar_tudo')
 const div_btn_apagar_tudo = document.getElementById('div_btn_apagar_tudo')
+
+// resolver o bug do childNodes com text
+tela.childNodes.forEach((e)=>{
+    tela.removeChild(e)
+})
+
+// sitema de verificação se a anotação está em branco
 btn_enviar.addEventListener('click' , ()=>{
     if(iano.value == ''){
-        // sitema de verificação se a anotação está em branco
         alert('sem anotação')
         
     }else{
@@ -39,7 +45,7 @@ btn_enviar.addEventListener('click' , ()=>{
         // botão da lixeirinha pra apagar as heckbox separadamente
         btn.addEventListener('click', (evt)=>{
             evt.target.parentNode.remove()    
-            if(tela.childNodes.length <= 1){
+            if(tela.childNodes.length <= 0){
                 div_btn_apagar_tudo.style.display='none'
             }
         })   
@@ -58,6 +64,7 @@ btn_enviar.addEventListener('click' , ()=>{
         btn_apagar_tudo.addEventListener('click' , (e)=>{
             tela.childNodes.forEach((evt)=>{
                 tela.removeChild(evt)
+                tela.innerHTML=''
             })
             div_btn_apagar_tudo.style.display= 'none'
         })
