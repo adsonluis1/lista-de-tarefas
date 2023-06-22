@@ -1,0 +1,75 @@
+header{
+    width: 211px;
+}
+
+section{
+    /* background-color: rgb(219, 219, 58); */
+    border: 2px solid black;
+    border-radius: 5px 5px 0px 0px ;
+    width: 60%;
+    max-width: 700px;
+    min-width: 250px;
+    height: 60%;
+    min-height: 200px;
+    max-height: 600px;
+    padding: 10px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=button]{
+    background-color: rgb(255, 200, 100);
+    color: black;
+    font-weight: bold;
+}
+
+input[type=checkbox]{
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+
+.risco{
+    text-decoration: line-through;
+}
+
+#data{
+    display: flex;
+    justify-content: end;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+span{
+    display: block;
+}
+
+button{
+   display: block;
+   margin: auto;
+   height: 20px;
+   width: 50px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#btn_apagar{
+    display: flex;
+    align-items: end;
+}
+
+#div_btn_apagar_tudo{
+    display: none;
+}
+
+.btn{
+    background-color: rgb(255, 200, 100);
+    border: 1px solid black;
+}
